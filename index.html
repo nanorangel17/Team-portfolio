@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./main.css">
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Team Portfolio</title>
+  </head>
+  <body class="w-full">
+    <div class="w-full items-center justify-center text-center">
+      <h1 class="text-5xl">Team Name</h1>
+      <div class="container">
+      <div class="w-full p-6 relative">
+        <section id="erik" class="container bg-red-500 rounded-md p-2 relative drop-shadow-lg">
+          <div class="gap-6">
+            <h1 class="text-3xl text-left ff">Erik Salazar</h1>
+            <ul class="flex gap-2">
+                <li class="p-2"><a href="">Github</a></li>
+                <li class="p-2"><a href="">Behance</a></li>
+                <li class="p-2"><a href="">Link3</a></li>
+              </ul>
+            <ul class="flex">
+                <li class="p-2"><button class="rounded-full bg-blue-400 px-3 text-left">Programmer</button></li>
+            </ul>
+            
+
+          <img
+            class="absolute top-0 right-0 md:hidden rounded-tr-md shadow-lg"
+            src="https://via.placeholder.com/100"
+          />
+          <ul
+            class="w-[310px] md:w-full flex overflow-x-scroll snap-x p-2 gap-2"
+          >
+            <li class="min-w-[310px] snap-center bg-white p-4 rounded-md">
+              <a href=""
+                ><img
+                  class="rounded-md"
+                  src="https://via.placeholder.com/300x200"
+              /></a>
+              <h4 class="text-center">Project 1</h4>
+            </li>
+            <li class="min-w-[300px] snap-center bg-white p-4 rounded-md">
+              <a href=""
+                ><img
+                  class="rounded-md"
+                  src="https://via.placeholder.com/300x200"
+              /></a>
+              <h4 class="text-center">Project 2</h4>
+            </li>
+            <li class="min-w-[300px] snap-center bg-white p-4 rounded-md">
+              <a href=""
+                ><img
+                  class="rounded-md"
+                  src="https://via.placeholder.com/300x200"
+              /></a>
+              <h4 class="text-center">Project 3</h4>
+            </li>
+          </ul>
+          <div class="bg-white max-w-xl mx-auto border border-gray-200 rounded-b-lg">
+            <ul class="shadow-box">
+              <li
+                class="relative border-b border-gray-200 rounded-b-lg"
+                x-data="{selected:null}"
+              >
+                <button
+                  type="button"
+                  class="w-full px-8 py-6 text-left rounded-md"
+                  @click="selected !== 1 ? selected = 1 : selected = null"
+                >
+                  <div class="flex items-center justify-center">
+                    <span class="text-center">View More</span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  x-ref="container1"
+                  x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                >
+                  <div class="p-6">
+                    <p>
+                        <!-- Code Below -->
+                        What Ideas Can You Think Of?
+                        <!-- Code Above -->
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
